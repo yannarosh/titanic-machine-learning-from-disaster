@@ -29,7 +29,7 @@ Conceptually, the project pipeline is split into 3 parts.
 2. Model building and evaluation
 3. Use the final model to predict and submit
 
-This corresponds with the file hierarchy in this repo, which is along the lines of:
+This corresponds to the file hierarchy in this repo, which is along the lines of:
 
 **EDA notebooks**
 
@@ -56,7 +56,7 @@ The # represents the EDA iteration - the exploratory data analysis was carried o
 
 ### Exploratory Data Analysis
 
-As a general principle, the test set was treated as a set of never seen before observations. So caution was taken, in order to not leak any information from the testing set into the training set. Thus, the test set was not explored, but got recoded and had its missing values imputed. It is a general consensus that leaking data into the training set usually yields better results on Kaggle.
+As a general principle, the test set was treated as a set of never seen before observations. So, caution was taken, in order to not leak any information from the testing set into the training set. Thus, the test set was not explored, but got recoded and had its missing values imputed.
 
 The process I followed consists of two broad steps:
 
@@ -112,7 +112,7 @@ A drawback of this approach is that, since hyperparameter tuning is performed on
 
 ### Final model building and submission
 
-In this step a model has already been picked from the model building step. The chosen model is fit on the entire preprocessed train set and predicts the response of the preprocessed test set. 
+In this step a model has already been picked from the model building step. The chosen model is fit on the entire preprocessed train set and predicts the response of the preprocessed test set. An ensemble model was also built.
 
 A csv file is output to submit to Kaggle.
 
